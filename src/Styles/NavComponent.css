@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+}
+
+.nav-component {
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    background-color: #282c34;
+    color: orangered;
+    font-size: 30px;
+    justify-content: center;
+}
