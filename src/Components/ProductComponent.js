@@ -10,8 +10,14 @@ don't forget to pass a `key` prop to it to avoid the warning.
 import React from 'react'
 
 function ProductComponent(props){
+
+    let styles = {
+        color: "#8b6e53",
+        paddingLeft: "50px",
+        paddingBottom: "10px"
+    }
     return(
-        <div>
+        <div style={styles}>
             <h3> Name: {props.name}</h3>
             <p>Description: {props.description}</p>
             <h4>Price: ${props.price}</h4>
