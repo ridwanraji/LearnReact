@@ -1,11 +1,13 @@
 import React from 'react'
 
-function SchoolGrades (props) {
-    return(
-        <div>
-            <p>{props.course} : {props.grade}</p>
-        </div>
-    )
+class SchoolGrades extends React.Component {
+    render() {
+        return(
+            <div>
+                <p>{this.props.course} : {this.props.grade}</p>
+            </div>
+        )
+    }
 }
 
 export default SchoolGrades
