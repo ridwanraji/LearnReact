@@ -3,8 +3,22 @@ import React from 'react';
 import NavComponent from './Components/NavComponent'
 import MyInfo from './Components/MyInfo'
 import SchoolGrades from './Components/SchoolGradesComponent'
+import ProductsData from './Data/SchoolProduct'
+import ProductComponent from './Components/ProductComponent'
 
 function App() {
+  // A function that renders a product component for each product data in the array of products using HOF map()
+  const renderProduct = ProductsData.map(function(product){
+    return(
+      <ProductComponent
+        key = {product.id}
+        name = {product.name}
+        description = {product.description}
+        price = {product.price}
+      />
+    )
+  })
+
   return (
     <div>
       <NavComponent />
@@ -19,6 +33,9 @@ function App() {
       <SchoolGrades
         course = "CMPT380"
         grade = "85"/>
+      
+      <h1> PRODUCT TABLE </h1>
+      {renderProduct}
     </div>
   );
 }
