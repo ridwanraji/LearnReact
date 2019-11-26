@@ -3,8 +3,14 @@ import TodoData from "./Data/TodoData"
 import TodoComponent from './Components/TodoComponent'
 
 class TodoApp extends React.Component {
+    constructor(){
+        super()
+        this.state = {
+            todo: TodoData
+        }
+    }
     render(){
-        let TodoItems = TodoData.map(
+        let TodoItems = this.state.todo.map(
             function(todos){
                 console.log(todos)
                 return(
