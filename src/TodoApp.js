@@ -12,7 +12,6 @@ class TodoApp extends React.Component {
     render(){
         let TodoItems = this.state.todo.map(
             function(todos){
-                console.log(todos)
                 return(
                     <TodoComponent
                         key = {todos.id}
