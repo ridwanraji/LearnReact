@@ -4,7 +4,7 @@ class TodoComponent extends React.Component {
     render(){
         return(
             <div>
-                <input type="checkbox" checked={this.props.items.completed} />
+                <input type="checkbox" checked={this.props.items.completed} onChange ={() => console.log("Changed")} />
                 <p> {this.props.items.text} </p>
             </div>
         )
