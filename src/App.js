@@ -7,9 +7,17 @@ import ProductsData from "./Data/SchoolProduct";
 import ProductComponent from "./Components/ProductComponent";
 
 class App extends React.Component {
+
+  constructor(){
+    super()
+    this.state = {
+      products: ProductsData
+    }
+  }
+
   render() {
     // A function that renders a product component for each product data in the array of products using HOF map()
-    const renderProduct = ProductsData.map(function(product) {
+    const renderProduct = this.state.products.map(function(product) {
       return (
         <ProductComponent
           key={product.id}
